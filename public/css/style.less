@@ -194,3 +194,156 @@ footer
         cursor: default;
     }
 }
+
+
+// login
+#viewport
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.login
+{
+  width: 375px;
+  height: 355px;
+  position: fixed;
+  z-index: 999;
+  .center;
+
+  > .top
+  {
+    background: #056783;
+    height: 50%;
+    width: 100%;
+
+    > #logo_darwined
+    {
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-image: url(../img/logo_darwined.svg);
+      background-size: 85%;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  > .bottom
+  {
+    background: #04627D;
+    margin-top: 2px;
+    height: 50%;
+    width: 100%;
+
+    > form
+    {
+      padding: 9% 8%;
+      box-sizing: border-box;
+      width: 100%;
+
+      input
+      {
+        width: 100%;
+        box-sizing: border-box;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: 'Open Sans';
+        font-weight: 300;
+        color: #036884;
+        .shadow(2px 2px 10px rgba(68, 68, 68, 0.43) inset);
+
+        &:hover
+        {
+          .shadow(none);
+        }
+
+        &::-webkit-input-placeholder {
+           color: #036884;
+           font-weight: 300;
+        }
+
+        &:-moz-placeholder { /* Firefox 18- */
+           color: #036884;
+           font-weight: 300;
+        }
+
+        &::-moz-placeholder {  /* Firefox 19+ */
+           color: #036884;
+           font-weight: 300;
+        }
+
+        &:-ms-input-placeholder {
+           color: #036884;
+           font-weight: 300;
+        }
+
+        &:nth-child(1)
+        {
+          padding: 7px;
+        }
+        &:nth-child(2)
+        {
+          padding: 6px 10px;
+          margin: 7px 0;
+        }
+
+        &[type=submit]{
+          background-color: #1286A6;
+          color: #fff;
+          border: none;
+          padding: 11px;
+          font-weight: 400;
+          font-size: 15px;
+          letter-spacing: 1px;
+          cursor: pointer;
+
+          .shadow(2px 2px 3px rgba(68, 68, 68, 0.25));
+
+          &:hover
+          {
+            .shadow(none);
+            .brillo();
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  font-size: 10px;
+
+  > .right
+  {
+    float: right;
+    margin-right: 2%;
+
+    .logoForis {
+      float: right;
+      width: 70px;
+      height: 80%;
+      position: relative;
+      top: -14px;
+      background-image: url(../img/logoForis.svg);
+      background-size: 60px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      display: block;
+    }
+
+    .fraseEmpresa
+    {
+      float: left;
+    }
+
+  }
+
+}

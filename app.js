@@ -52,10 +52,14 @@ var connection = mysql.createConnection({
 	password : '',
 	database : 'darwined_siglo21_planner_scenarios'
 });
- // register form
- app.get('/register', function(req, res){
-   // get rols
-   connection.query('SELECT * FROM `rols`' , function(err, rols) {
-     res.render('register', {data: {rols:rols} });
-   });
+// register form
+app.get('/register', function(req, res){
+ // get rols
+ connection.query('SELECT * FROM `rols`' , function(err, rols) {
+   res.render('register', {data: {rols:rols} });
  });
+});
+// login form
+app.get('/login', function(req, res){
+  res.render('login', {data: 'values'});
+});
