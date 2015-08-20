@@ -195,7 +195,6 @@ footer
     }
 }
 
-
 // login
 #viewport
 {
@@ -289,23 +288,29 @@ footer
           margin: 7px 0;
         }
 
-        &[type=submit]{
-          background-color: #1286A6;
-          color: #fff;
-          border: none;
-          padding: 11px;
-          font-weight: 400;
-          font-size: 15px;
-          letter-spacing: 1px;
-          cursor: pointer;
+      }
 
-          .shadow(2px 2px 3px rgba(68, 68, 68, 0.25));
+      #entrar{
+        width: 100%;
+        box-sizing: border-box;
+        font-family: 'Open Sans';
+        font-weight: 300;
+        color: #fff;
+        background-color: #1286A6;
+        border: none;
+        padding: 11px;
+        font-size: 15px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        display: block;
+        height: 40px;
 
-          &:hover
-          {
-            .shadow(none);
-            .brillo();
-          }
+        .shadow(2px 2px 3px rgba(68, 68, 68, 0.25));
+
+        &:hover
+        {
+          .shadow(none);
+          .brillo();
         }
       }
     }
