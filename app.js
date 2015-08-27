@@ -12,6 +12,7 @@ var url = require('url'); // req.body
 app = express();
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
@@ -33,7 +34,7 @@ app.use(express.static(__dirname + '/public'));
  * Start listening
  */
 var server = app.listen(4000, function() {
-	console.log('Listening on port %d'.green, server.address().port)
+	console.log('Daccount Listening on port %d'.green, server.address().port)
 });
 
 /*
@@ -45,13 +46,14 @@ var server = app.listen(4000, function() {
  */
  var mysql = require('mysql');
 
-// DB connect
-var connection = mysql.createConnection({
-	host     : 'localhost',
-	user     : 'root',
-	password : '',
-	database : 'darwined_siglo21_planner_scenarios'
-});
+ // DB connect
+ var dbconfig = require('./db/config');
+ var connection = mysql.createConnection({
+  host     : dbconfig.host,
+  user     : dbconfig.user,
+  password : dbconfig.password,
+  database : dbconfig.database
+ });
 // register form
 app.get('/register', function(req, res){
  // get rols
@@ -61,5 +63,5 @@ app.get('/register', function(req, res){
 });
 // login form
 app.get('/login', function(req, res){
-  res.render('login', {data: 'values'});
+  res.render('login');
 });

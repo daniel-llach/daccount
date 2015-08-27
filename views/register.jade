@@ -2,6 +2,10 @@ extend layout
 block content
   form(name="register", class="form register", action="http://localhost:5000/register", method="post")
       li
+        h1 Obten tu cuenta foris
+      li(style="height: 60px; font-size: 11px;")
+        p Con tu cuenta foris podrás acceder solo a las aplicaciones que tienes contratadas por medio de <a href="#"> nuestros planes </a>  
+      li
         input(type="text", name="username", id="username", placeholder="nombre de usuario", required)
       li
         input(type="password", name="password", id="password", placeholder="password", required)
