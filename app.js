@@ -45,23 +45,17 @@ var server = app.listen(4000, function() {
 /*
  * Unprotected routes
  */
- var mysql = require('mysql');
+ var getRols = require('./controls/getRols');
+ var getClientes = require('./controls/getClientes');
 
- // DB connect
- var connection = mysql.createConnection({
-  host     : config.db_host,
-  user     : config.db_user,
-  password : config.db_password,
-  database : config.db_database
- });
 // register form
-app.get('/register', function(req, res){
- // get rols
- connection.query('SELECT * FROM `rols`' , function(err, rols) {
-   res.render('register', {
-     url_faccount: config.url_faccount,
-     data: {rols:rols}
-   });
+app.get('/register', getRols, getClientes, function(req, res){
+ res.render('register', {
+   url_faccount: config.url_faccount,
+   data: {
+     rols: req.rols,
+     clientes: req.clientes
+   }
  });
 });
 // login form

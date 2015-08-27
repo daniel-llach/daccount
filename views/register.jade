@@ -17,6 +17,10 @@ block content
         select(name="rol", id="rol" required)
           for rol in data.rols
             option(value=rol.id)= rol.nombre
+      li
+        select(name="cliente", id="cliente" required)
+          for cliente in data.clientes
+            option(value=cliente.id)= cliente.nombre
       input(type="submit", value="registrarse", id="registrar", class="submit")
       
       
