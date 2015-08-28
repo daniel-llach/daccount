@@ -1,7 +1,7 @@
 /*
  * Routers
  */
-module.exports.url_agendador = 'http://localhost:3000';
+module.exports.url_agendador = 'agendadorapp.herokuapp.com';
 module.exports.url_daccount = 'daccount.herokuapp.com';
 module.exports.url_faccount = 'faccount.herokuapp.com';
 // module.exports.url_darwined = 'http://localhost/darwined/big_branch';
