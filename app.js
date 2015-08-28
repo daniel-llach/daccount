@@ -34,7 +34,7 @@ app.use(express.static(__dirname + '/public'));
 /*
  * Start listening
  */
-var server = app.listen(4000, function() {
+var server = app.listen(process.env.PORT || 4000, function() {
 	console.log('Daccount Listening on port %d'.green, server.address().port)
 });
 
