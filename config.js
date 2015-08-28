@@ -4,7 +4,7 @@
 module.exports.url_agendador = 'http://localhost:3000';
 module.exports.url_daccount = 'http://localhost:4000';
 module.exports.url_faccount = 'http://localhost:5000';
-module.exports.url_darwined = 'http://localhost/darwined/big_branch';
+// module.exports.url_darwined = 'http://localhost/darwined/big_branch';
 
 /*
  * CONFIG DATABASE
