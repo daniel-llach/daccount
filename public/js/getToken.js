@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function(url_daccount){
   $('#loginform').on('submit', function(event){
     event.preventDefault();
     // get form params
@@ -6,7 +6,7 @@ $(document).ready(function(){
     var password = $('#password').val();
     // get user token
     $.ajax({
-         url: "http://localhost:5000/token",
+         url: "https://faccount.herokuapp.com/token",
          headers: {
              'username': username,
              'password': password
