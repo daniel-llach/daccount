@@ -15,7 +15,7 @@ $(document).ready(function(url_daccount){
          type: "GET",
          success: function(data) {
            console.log("data: ", data.token);
-           window.location.replace("http://localhost:3000" + "?t=" + data.token);
+           window.location.replace("https://agendadorapp.herokuapp.com" + "?t=" + data.token);
          },
          error: function(){
            $('#message').text('*Datos incorrectos');
