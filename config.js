@@ -3,7 +3,6 @@
  */
 module.exports.url_daccount = 'https://daccount.herokuapp.com';
 module.exports.url_faccount = 'https://faccount.herokuapp.com';
-// module.exports.url_darwined = 'http://localhost/darwined/big_branch';
 
 /*
  * CONFIG DATABASE
