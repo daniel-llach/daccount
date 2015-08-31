@@ -1,4 +1,4 @@
-$(document).ready(function(url_daccount){
+$(document).ready(function(){
   $('#loginform').on('submit', function(event){
     event.preventDefault();
     // get form params
