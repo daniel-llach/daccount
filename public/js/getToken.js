@@ -15,7 +15,7 @@ $(document).ready(function(){
          type: "GET",
          success: function(data) {
            console.log("data: ", data.token);
-           window.location.replace("https://agendadorapp.herokuapp.com" + "?t=" + data.token);
+           window.location.replace("http://agendadorapp.herokuapp.com" + "?t=" + data.token);
          },
          error: function(){
            $('#message').text('*Datos incorrectos');
