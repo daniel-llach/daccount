@@ -4,7 +4,7 @@ block content
       li
         h1 Obten tu cuenta foris
       li(style="height: 60px; font-size: 11px;")
-        p Con tu cuenta foris podrás acceder solo a las aplicaciones que tienes contratadas por medio de <a href="#"> nuestros planes </a>  
+        p Con tu cuenta foris podrás acceder sólo a las aplicaciones que tienes contratado. Para mayor información visita <a href="#"> nuestros planes </a>  
       li
         input(type="text", name="username", id="username", placeholder="nombre de usuario", required)
       li
@@ -17,10 +17,10 @@ block content
         select(name="rol", id="rol" required)
           for rol in data.rols
             option(value=rol.id)= rol.nombre
-      li
-        select(name="cliente", id="cliente" required)
-          for cliente in data.clientes
-            option(value=cliente.id)= cliente.nombre
+      //- li
+      //-   select(name="cliente", id="cliente" required)
+      //-     for cliente in data.clientes
+      //-       option(value=cliente.id)= cliente.nombre
       input(type="submit", value="Enviar solicitud", id="registrar", class="submit")
       
       
