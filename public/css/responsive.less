@@ -1,3 +1,11 @@
+.translate (@x: -50%, @y: -50%)
+{
+    -webkit-transform: translate( @x, @y );
+    -moz-transform: translate( @x, @y );
+    -o-transform: translate( @x, @y );
+    transform: translate( @x, @y );
+}
+
 /* Mobile ----------- */
 @media only screen
 and (max-width : 375px) {
@@ -5,6 +13,12 @@ and (max-width : 375px) {
   {
     width: 80%;
     top: 46%;
+  }
+  #register
+  {
+    position: relative;
+    margin-left: 5%;
+    .translate(none,none);
   }
 }
 
